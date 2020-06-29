@@ -12,6 +12,9 @@ import com.nordstrom.automation.selenium.support.TestNgBase;
 @InitialPage(LightningConferenceRoot.class)
 public class ModelTest extends TestNgBase {
 	
+	private static final String CLASS_NAME = "The Future of JavaScript";
+	private static final String CLASS_ROOM = "Keynote room";
+	
 	@Test
 	public void checkSessionCount() {
 		LightningConferenceRoot page = (LightningConferenceRoot) getInitialPage();
@@ -20,8 +23,10 @@ public class ModelTest extends TestNgBase {
 	}
 	
 	@Test
-	public void check() {
+	public void checkSessionRoom() {
 		LightningConferenceRoot page = (LightningConferenceRoot) getInitialPage();
-		SessionDetailsPage sessionPage = page.getSessionList().openSessionPage("The Future of JavaScript");
+		SessionDetailsPage sessionPage = page.getSessionList().openSessionPage(CLASS_NAME);
+		SessionDetails sessionDetails = sessionPage.getSessionDetails();
+		assertEquals(sessionDetails.getRoom(), CLASS_ROOM);
 	}
 }
