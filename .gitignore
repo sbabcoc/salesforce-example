@@ -18,3 +18,6 @@ gradlew.bat
 /bin/
 test-output/
 .DS_Store
+*.json
+*.log
+formatter.xml
