@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 import com.nordstrom.automation.selenium.annotations.PageUrl;
 
+/**
+ * This class models the root page of the <b>Lightning Conference</b> example site.
+ */
 @PageUrl("/")
 public class LightningConferenceRoot extends AppPage {
     
@@ -29,6 +32,11 @@ public class LightningConferenceRoot extends AppPage {
         }
     }
     
+    /**
+     * Get the session list page component.
+     * 
+     * @return session list component
+     */
     public SessionList getSessionList() {
         if (sessionList == null) {
             sessionList = new SessionList(Using.SESSION_LIST.locator, getAppRoot());

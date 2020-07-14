@@ -7,6 +7,9 @@ import org.openqa.selenium.By;
 import com.nordstrom.automation.selenium.model.ComponentContainer;
 import com.nordstrom.automation.selenium.model.ShadowRoot;
 
+/**
+ * This class models the session details shadow DOM component.
+ */
 public class SessionDetails extends ShadowRoot {
 
     public SessionDetails(By locator, ComponentContainer parent) {
@@ -32,18 +35,38 @@ public class SessionDetails extends ShadowRoot {
         }
     }
     
+    /**
+     * Get the title for this session.
+     * 
+     * @return session title
+     */
     public String getTitle() {
         return findElement(Using.CLASS_TITLE).getText();
     }
     
+    /**
+     * Get the time for this session.
+     * 
+     * @return session time
+     */
     public Date getTime() {
         return ClassTimeFormat.parse(findElement(Using.CLASS_TIME).getText());
     }
     
+    /**
+     * Get the room for this session.
+     * 
+     * @return session room
+     */
     public String getRoom() {
         return findElement(Using.CLASS_ROOM).getText();
     }
     
+    /**
+     * Get the mapped collection of speakers for this session.
+     * 
+     * @return speaker map
+     */
     public Map<Object, SpeakerCard> getSpeakerMap() {
         return newComponentMap(SpeakerCard.class, Using.SPEAKER.locator);
     }
