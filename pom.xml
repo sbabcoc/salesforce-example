@@ -38,7 +38,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <selenium-foundation.version>18.3.0-s3</selenium-foundation.version>
+    <selenium-foundation.version>20.2.0-s3</selenium-foundation.version>
     <surefire-plugin.version>2.22.0</surefire-plugin.version>
     <source-plugin.version>3.2.0</source-plugin.version>
     <javadoc-plugin.version>3.1.1</javadoc-plugin.version>
@@ -59,11 +59,11 @@
       <groupId>com.nordstrom.ui-tools</groupId>
       <artifactId>selenium-foundation</artifactId>
     </dependency>
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-edge-driver</artifactId>
-  <version>3.141.59</version>
-</dependency>
+	<dependency>
+	  <groupId>org.seleniumhq.selenium</groupId>
+	  <artifactId>selenium-chrome-driver</artifactId>
+	  <version>3.141.59</version>
+	</dependency>
   </dependencies>
   
   <build>

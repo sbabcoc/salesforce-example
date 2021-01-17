@@ -17,14 +17,14 @@ public class ModelTest extends TestNgBase {
     
     @Test
     public void checkSessionCount() {
-        LightningConferenceRoot page = (LightningConferenceRoot) getInitialPage();
+        LightningConferenceRoot page = getInitialPage();
         Map<Object, ClassSession> sessionMap = page.getSessionList().getSessionMap();
         assertEquals(sessionMap.size(), 4);
     }
     
     @Test
     public void checkSessionRoom() {
-        LightningConferenceRoot page = (LightningConferenceRoot) getInitialPage();
+        LightningConferenceRoot page = getInitialPage();
         SessionDetailsPage sessionPage = page.getSessionList().openSessionPage(CLASS_NAME);
         SessionDetails sessionDetails = sessionPage.getSessionDetails();
         assertEquals(sessionDetails.getRoom(), CLASS_ROOM);

@@ -18,7 +18,7 @@ public class LightningConferenceRoot extends AppPage {
     }
     
     protected enum Using implements ByEnum {
-        SESSION_LIST(By.tagName("my-session-list"));
+        SESSION_LIST(By.cssSelector("my-session-list"));
         
         private By locator;
         

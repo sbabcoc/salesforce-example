@@ -24,7 +24,7 @@ public class SessionDetailsPage extends AppPage implements DetectsLoadCompletion
     }
 
     protected enum Using implements ByEnum {
-        SESSION_DETAILS(By.tagName("my-session-details"));
+        SESSION_DETAILS(By.cssSelector("my-session-details"));
         
         private By locator;
         
