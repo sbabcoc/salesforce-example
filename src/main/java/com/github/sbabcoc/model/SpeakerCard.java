@@ -80,7 +80,7 @@ public class SpeakerCard extends ShadowRoot {
      * @return speaker card key
      */
     public static Object getKey(SearchContext context) {
-        return context.findElement(Using.TITLE.locator).getText();
+        return getShadowRoot(context).findElement(Using.TITLE.locator).getText();
     }
 
 }
