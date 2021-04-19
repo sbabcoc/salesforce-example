@@ -38,7 +38,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <selenium-foundation.version>20.2.0-s3</selenium-foundation.version>
+    <selenium-foundation.version>22.0.1-s3</selenium-foundation.version>
+    <selenium.version>3.141.59</selenium.version>
     <surefire-plugin.version>2.22.0</surefire-plugin.version>
     <source-plugin.version>3.2.0</source-plugin.version>
     <javadoc-plugin.version>3.1.1</javadoc-plugin.version>
@@ -51,6 +52,11 @@
         <artifactId>selenium-foundation</artifactId>
         <version>${selenium-foundation.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-edge-driver</artifactId>
+        <version>${selenium.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
     
@@ -61,8 +67,7 @@
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-chrome-driver</artifactId>
-      <version>3.141.59</version>
+      <artifactId>selenium-edge-driver</artifactId>
     </dependency>
   </dependencies>
   
@@ -91,6 +96,14 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <systemProperties>
+            <property>
+              <name>webdriver.edge.driver</name>
+              <value>C:\Users\scoba\bin\msedgedriver.exe</value>
+            </property>
+          </systemProperties>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -115,4 +128,3 @@
     </plugins>
   </build>
 </project>
-
