@@ -16,7 +16,11 @@ public class ModelTest extends TestNgBase {
     
     private static final String CLASS_NAME = "The Future of JavaScript";
     private static final String CLASS_ROOM = "Keynote room";
-    private static final List<String> CLASS_SPEAKERS = Arrays.asList("John Doe", "Laetitia Arevik");
+    private static final String SPEAKER_1 = "John Doe";
+    private static final String EMAIL_1 = "john.doe@trailhead.com";
+    private static final String BLURB_1 = "Master of all things JavaScript. Cat herder. ECMAScript lover.";
+    private static final String SPEAKER_2 = "Laetitia Arevik";
+    private static final List<String> CLASS_SPEAKERS = Arrays.asList(SPEAKER_1, SPEAKER_2);
     
     @Test
     public void checkSessionCount() {
@@ -49,5 +53,17 @@ public class ModelTest extends TestNgBase {
         SessionDetails sessionDetails = sessionPage.getSessionDetails();
         Map<Object, SpeakerCard> speakerMap = sessionDetails.getSpeakerMap();
         assertEquals(speakerMap.keySet(), CLASS_SPEAKERS);
+    }
+    
+    @Test
+    public void checkSpeakerCard() {
+        LightningConferenceRoot page = getInitialPage();
+        SessionDetailsPage sessionPage = page.getSessionList().openSessionPage(CLASS_NAME);
+        SessionDetails sessionDetails = sessionPage.getSessionDetails();
+        Map<Object, SpeakerCard> speakerMap = sessionDetails.getSpeakerMap();
+        SpeakerCard speakerCard = speakerMap.get(CLASS_SPEAKERS.get(0));
+        assertEquals(speakerCard.getTitle(), SPEAKER_1);
+        assertEquals(speakerCard.getEmail(), EMAIL_1);
+        assertEquals(speakerCard.getBlurb(), BLURB_1);
     }
 }
