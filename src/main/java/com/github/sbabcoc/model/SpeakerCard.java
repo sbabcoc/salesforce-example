@@ -2,9 +2,8 @@ package com.github.sbabcoc.model;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
-import org.openqa.selenium.WebElement;
-
-import com.nordstrom.automation.selenium.core.WebDriverUtils;
+import com.nordstrom.automation.selenium.core.ByType;
+import com.nordstrom.automation.selenium.core.JsUtility;
 import com.nordstrom.automation.selenium.model.ComponentContainer;
 import com.nordstrom.automation.selenium.model.RobustWebElement;
 import com.nordstrom.automation.selenium.model.ShadowRoot;
@@ -14,7 +13,8 @@ import com.nordstrom.automation.selenium.model.ShadowRoot;
  */
 public class SpeakerCard extends ShadowRoot {
     
-    private static final String EXTRACT_BLURB = "return arguments[0].lastChild.textContent;";
+    private static final String EXTRACT_BLURB = 
+            "return arguments[0].querySelector(arguments[1]).lastChild.textContent;";
 
     public SpeakerCard(By locator, ComponentContainer parent) {
         super(locator, parent);
@@ -67,8 +67,8 @@ public class SpeakerCard extends ShadowRoot {
      * @return speaker card "blurb"
      */
     public String getBlurb() {
-        WebElement card = findElement(Using.CARD);
-        return (String) WebDriverUtils.getExecutor(this).executeScript(EXTRACT_BLURB, card);
+        return JsUtility
+                .runAndReturn(getDriver(), EXTRACT_BLURB, getWrappedContext(), ByType.cssLocatorFor(Using.CARD));
     }
     
     /**
