@@ -38,7 +38,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <selenium-foundation.version>22.0.3-s3</selenium-foundation.version>
+    <selenium-foundation.version>22.4.3-s3</selenium-foundation.version>
     <selenium.version>3.141.59</selenium.version>
     <surefire-plugin.version>2.22.0</surefire-plugin.version>
     <source-plugin.version>3.2.0</source-plugin.version>
@@ -54,7 +54,7 @@
       </dependency>
       <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-edge-driver</artifactId>
+        <artifactId>selenium-chrome-driver</artifactId>
         <version>${selenium.version}</version>
       </dependency>
     </dependencies>
@@ -67,7 +67,7 @@
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-edge-driver</artifactId>
+      <artifactId>selenium-chrome-driver</artifactId>
     </dependency>
   </dependencies>
   
