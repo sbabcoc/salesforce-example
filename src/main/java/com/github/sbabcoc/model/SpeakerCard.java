@@ -68,7 +68,7 @@ public class SpeakerCard extends ShadowRoot {
      */
     public String getBlurb() {
         return JsUtility
-                .runAndReturn(getDriver(), EXTRACT_BLURB, getWrappedContext(), ByType.cssLocatorFor(Using.CARD));
+                .runAndReturn(getWrappedDriver(), EXTRACT_BLURB, getWrappedContext(), ByType.cssLocatorFor(Using.CARD));
     }
     
     /**
