@@ -1,6 +1,6 @@
 # Introduction
 
-This **salesforce-example** project implements page models of the **Salesforce** `Lightning Web Components` [example site](https://conference-lwc-app.herokuapp.com/).
+This **salesforce-example** project implements page models of the **Salesforce** `Lightning Web Components` [example site](https://conference-lwc-app.herokuapp.com/). Unfortunately, the example site this project was designed to navigate has been retired. I'll update this project if I can find a replacement.
 
 ## Page Model Structure
 
