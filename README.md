@@ -23,3 +23,7 @@ This example project demonstrates the following features:
   * ... transition synchronization
 
 This last feature (transition synchronization) is especially important to the stability of the model. Automation with inadequate synchronization is prone to non-deterministic behavior, which can trigger false negatives - test failures that indicate errors that don't actually exist. The transition synchronization facilities provided by **Selenium Foundation** enable the creation of stable page models with minimal custom implementation.
+
+## NOTICE
+
+The example site this project targets has been shut down. I have yet to find a replacement for this resource.
