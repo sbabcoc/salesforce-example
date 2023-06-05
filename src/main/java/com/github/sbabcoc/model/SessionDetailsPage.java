@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.nordstrom.automation.selenium.annotations.PageUrl;
 import com.nordstrom.automation.selenium.interfaces.DetectsLoadCompletion;
 import com.nordstrom.automation.selenium.support.Coordinator;
 import com.nordstrom.automation.selenium.support.Coordinators;
@@ -12,7 +11,6 @@ import com.nordstrom.automation.selenium.support.Coordinators;
 /**
  * This class models the session details page of the <b>Lightning Conference</b> example site.
  */
-@PageUrl("/")
 public class SessionDetailsPage extends AppPage implements DetectsLoadCompletion {
 
     private SessionDetails sessionDetails;

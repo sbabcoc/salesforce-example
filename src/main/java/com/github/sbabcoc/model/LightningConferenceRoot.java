@@ -3,12 +3,9 @@ package com.github.sbabcoc.model;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.nordstrom.automation.selenium.annotations.PageUrl;
-
 /**
  * This class models the root page of the <b>Lightning Conference</b> example site.
  */
-@PageUrl("/")
 public class LightningConferenceRoot extends AppPage {
     
     private SessionList sessionList;

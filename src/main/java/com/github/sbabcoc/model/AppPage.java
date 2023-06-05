@@ -2,7 +2,6 @@ package com.github.sbabcoc.model;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import com.nordstrom.automation.selenium.model.ComponentContainer;
 import com.nordstrom.automation.selenium.model.Page;
 import com.nordstrom.automation.selenium.model.ShadowRoot;
