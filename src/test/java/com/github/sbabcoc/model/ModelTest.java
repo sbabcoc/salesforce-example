@@ -9,9 +9,10 @@ import java.util.Map;
 import org.testng.annotations.Test;
 
 import com.nordstrom.automation.selenium.annotations.InitialPage;
+import com.nordstrom.automation.selenium.annotations.PageUrl;
 import com.nordstrom.automation.selenium.support.TestNgBase;
 
-@InitialPage(LightningConferenceRoot.class)
+@InitialPage(value = LightningConferenceRoot.class, pageUrl = @PageUrl("/"))
 public class ModelTest extends TestNgBase {
     
     private static final String CLASS_NAME = "The Future of JavaScript";
